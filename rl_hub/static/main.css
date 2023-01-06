@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+}
+
+#main-nav {
+    background-color: rgb(140, 9, 196);
+    font-size: 25px;
+    padding: 5px 15px 5px 10px;
+}
+
+#main-footer {
+    background-color: lightblue;
+}
+
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list li {
+    display: inline-block;
+}
+
+.nav-navigation {
+    padding: 8px;
+    float: left;
+    color: cornsilk;
+}
+.nav-navigation:hover {
+    background-color: blueviolet;
+}
+
+.nolink {
+    text-decoration: none;
+}
+
+.flr {
+    float: right;
+}

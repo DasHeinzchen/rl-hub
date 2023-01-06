@@ -1,0 +1,16 @@
+{% extends "head.html" %}
+{% block body %}
+    <div id="main-nav" class="main-nav navbar">
+        <ul id="nav-list">
+            <li><a href="/" id="nav-home" class="nav-navigation nolink">Home</a></li>
+            <li><a href="/tournaments" id="nav-tournaments" class="nav-navigation nolink">Tournaments</a></li>
+            <li><a href="/stats" id="nav-stats" class="nav-navigation nolink">Stats</a></li>
+            <li class="flr"><a href="/login" id="nav-login" class="nav-navigation nolink">Login</a></li>
+        </ul>
+    </div>
+    {% block content %}{% endblock content %}
+    <footer id="main-footer">
+        footer
+    </footer>
+    {% block script %}{% endblock script %}
+{% endblock body %}
