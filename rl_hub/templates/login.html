@@ -1,0 +1,52 @@
+{% extends "content.html" %}
+{% block content %}
+    <div class="center">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <legend>Log In</legend>
+                <div class="form-group">
+                    {{ form.email.label() }}
+                        {% if form.email.errors %}
+                            {{ form.email() }}
+                            <div>
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email() }}
+                        {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label() }}
+                        {% if form.password.errors %}
+                            {{ form.password() }}
+                            <div>
+                                {% for error in form.password.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.password() }}
+                        {% endif %}
+                </div>
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit() }}
+                <small>
+                    <a href="">Forgot Password?</a>
+                </small>
+            </div>
+        </form>
+        <div>
+            <small>
+                Need An Account? <a href="">Sign Up Now</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
